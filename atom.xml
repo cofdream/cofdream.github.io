@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://cofdream.github.io</id>
+    <title>cofdream</title>
+    <updated>2022-09-01T09:28:47.134Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://cofdream.github.io"/>
+    <link rel="self" href="https://cofdream.github.io/atom.xml"/>
+    <logo>https://cofdream.github.io/images/avatar.png</logo>
+    <icon>https://cofdream.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, cofdream</rights>
+    <entry>
+        <title type="html"><![CDATA[Unity 安卓环境 无法使用 GB2312]]></title>
+        <id>https://cofdream.github.io/post/unity-an-zhuo-huan-jing-wu-fa-shi-yong-gb2312/</id>
+        <link href="https://cofdream.github.io/post/unity-an-zhuo-huan-jing-wu-fa-shi-yong-gb2312/">
+        </link>
+        <updated>2022-09-01T08:40:24.000Z</updated>
+        <content type="html"><![CDATA[<p>unity 安卓环境使用 Encoding.GetEncoding(&quot;GB2312&quot;) 报错</p>
+<blockquote>
+<p>错误日志：<br>
+NotSupportedException: Encoding 936 data could not be found. Make sure you have correct international codeset assembly installed and enabled.</p>
+</blockquote>
+<p>原因是Unity在发布安卓时并没有包含这些字符集，需要手动加相关的dll(I18N.DLL 和 I18N.CJK.DLL)加到项目内(Assets下就行，没有具体要求)。</p>
+<h4 id="相关目录">相关目录</h4>
+<blockquote>
+<p>老版本 Editor\Data\Mono\lib\mono\2.0<br>
+新版本 Editor\Data\MonoBleedingEdge\lib\mono\unityjit</p>
+</blockquote>
+<h3 id="参考">参考</h3>
+<p><a href="https://answers.unity.com/questions/1728036/unity20193-and-i18ndll.html">Unity2019.3 and I18N.dll</a></p>
+]]></content>
+    </entry>
+</feed>
